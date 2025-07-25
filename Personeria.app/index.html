@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votación Personería 2025</title>
+    <style>
+        /* RESET GENERAL */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('img/Azul.png') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            padding: 30px;
+            max-width: 900px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* TÍTULO */
+        h1 {
+            font-size: 2em;
+            color: #222;
+            margin-bottom: 20px;
+        }
+
+        /* CANDIDATOS */
+        .candidatos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .candidato {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease;
+            padding: 10px;
+        }
+
+        .candidato:hover {
+            transform: scale(1.05);
+        }
+
+        .candidato img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #ff6600;
+            object-fit: cover;
+        }
+
+        .nombre-candidato {
+            margin-top: 10px;
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+        /* RADIO BUTTONS */
+        .candidato input[type="radio"] {
+            margin-top: 5px;
+            transform: scale(1.3);
+        }
+
+        /* BOTÓN DE VOTAR */
+        .btn {
+            background-color: #ff6600;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .btn:hover {
+            background-color: #ff4500;
+            transform: scale(1.05);
+        }
+
+        /* BOTÓN DE RESULTADOS */
+        .btn-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 12px 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-link:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+
+        .btn-link img {
+            width: 20px;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗳️ Votación Personería 2025</h1>
+        <form action="votar.php" method="POST">
+            <div class="candidatos">
+                <label class="candidato">
+                    <img src="img/4.png" alt="Luis Felipe Rua Palacio">
+                    <span class="nombre-candidato"> Tomas Jerónimo Mesa</span>
+                    <input type="radio" name="candidato" value="1">
+                </label>
+                <label class="candidato">
+                    <img src="img/1.png" alt="Angeline Carmona">
+                    <span class="nombre-candidato">Angeline Carmona</span>
+                    <input type="radio" name="candidato" value="2">
+                </label>
+                <label class="candidato">
+                    <img src="img/5.png" alt="Bairon Rojas Chaverra">
+                    <span class="nombre-candidato">Bairon Rojas Chaverra</span>
+                    <input type="radio" name="candidato" value="3">
+                </label>
+                <label class="candidato">
+                    <img src="img/2.png" alt="María Alejandra Osorio Higuita">
+                    <span class="nombre-candidato">María Alejandra Osorio Higuita</span>
+                    <input type="radio" name="candidato" value="4">
+                </label>
+                <label class="candidato">
+                    <img src="img/6.png" alt="Sury Marleny Montoya">
+                    <span class="nombre-candidato">Sury Marleny Montoya</span>
+                    <input type="radio" name="candidato" value="5">
+                </label>
+                <label class="candidato">
+                    <img src="img/3.png" alt="Lizeth Orozco Arboleda">
+                    <span class="nombre-candidato">Lizeth Orozco Arboleda</span>
+                    <input type="radio" name="candidato" value="6">
+                </label>
+                <label class="candidato">
+                    <img src="img/7.jpeg" alt="Hosmani Pineda">
+                    <span class="nombre-candidato">Hosmani Pineda</span>
+                    <input type="radio" name="candidato" value="7">
+                </label>
+            </div>
+            <div class="voto-blanco">
+                <label>
+                    <input type="radio" name="candidato" value="0"> Voto en blanco
+                </label>
+            </div>
+            <button type="submit" class="btn">Votar</button>
+        </form>
+        <a href="resultados.php" class="btn-link">📊 Ver Resultados</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🗳️ Votación Contraloría 2025</title>
+    <link rel="stylesheet" href="./styles.css"> <!-- Asegura la ruta correcta del CSS externo -->
+    <style>
+       /* RESET GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('img/Azul.png') no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    color: #333;
+}
+
+.container {
+    padding: 30px;
+    max-width: 900px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* TÍTULO */
+h1 {
+    font-size: 2em;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+/* CANDIDATOS */
+.candidatos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+.candidato {
+    position: relative;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.candidato:hover {
+    transform: scale(1.05);
+}
+
+.candidato img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #ff6600;
+    object-fit: cover;
+}
+
+/* RADIO BUTTONS */
+input[type="radio"] {
+    margin-top: 8px;
+    transform: scale(1.3);
+}
+
+/* BOTÓN DE VOTAR */
+.btn {
+    background-color: #ff6600;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+.btn:hover {
+    background-color: #ff4500;
+    transform: scale(1.05);
+}
+
+/* BOTÓN DE RESULTADOS */
+.btn-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 12px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-link:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.btn-link img {
+    width: 20px;
+    margin-right: 8px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗳️ Votación Contraloría 2025</h1>
+        <form action="votar.php" method="POST">
+            <div class="candidatos">
+                <div class="candidato">
+                    <img src="img/8.png" alt="Tomas Jerónimo Mesa">
+                    <label><input type="radio" name="candidato" value="1"> Luis Felipe Rua Palacio</label>
+                </div>
+                <div class="candidato">
+                    <img src="img/7.png" alt="Johan Alexis Ciro">
+                    <label><input type="radio" name="candidato" value="2"> Johan Alexis Ciro </label>
+                </div>
+                <div class="candidato">
+                    <img src="img/12.png" alt="Breiner Andrés Porras">
+                    <label><input type="radio" name="candidato" value="3"> Breiner Andrés Porras </label>
+                </div>
+                <div class="candidato">
+                    <img src="img/9.png" alt="Any Yamile Brand">
+                    <label><input type="radio" name="candidato" value="4"> Any Yamile Brand </label>
+                </div>
+                <div class="candidato">
+                    <img src="img/11.png" alt="Deisy Giraldo">
+                    <label><input type="radio" name="candidato" value="5"> Deisy Giraldo </label>
+                </div>
+                <div class="candidato">
+                    <img src="img/10.png" alt="Victoria Mesa Morales">
+                    <label><input type="radio" name="candidato" value="6"> Victoria Mesa Morales </label>
+                </div>
+            </div>
+            <div class="voto-blanco">
+                <label><input type="radio" name="candidato" value="7"> Voto en blanco</label>
+            </div>
+            <button type="submit" class="btn">Votar</button>
+        </form>
+        <a href="resultadosc.php" class="btn-link">📊 Ver Resultados</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    max-width: 560px; /* 800px * 0.7 = 560px */
+    margin: 14px auto; /* 20px * 0.7 = 14px */
+    font-size: 12.6px; /* 18px * 0.7 = 12.6px */
+    background-image: url('img/Azul.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    margin-bottom: 21px; /* 30px * 0.7 = 21px */
+    font-size: 1.75em; /* 2.5em * 0.7 = 1.75em */
+}
+
+.candidatos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 21px; /* 30px * 0.7 = 21px */
+}
+
+.candidato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.candidato img {
+    width: 140px; /* 200px * 0.7 = 140px */
+    height: 140px; /* 200px * 0.7 = 140px */
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10.5px; /* 15px * 0.7 = 10.5px */
+}
+
+.candidato label {
+    font-size: 0.84em; /* 1.2em * 0.7 = 0.84em */
+}
+
+.voto-blanco {
+    margin-top: 21px; /* 30px * 0.7 = 21px */
+    font-size: 1.05em; /* 1.5em * 0.7 = 1.05em */
+}
+
+button {
+    padding: 10.5px 21px; /* 15px * 0.7 = 10.5px, 30px * 0.7 = 21px */
+    font-size: 0.84em; /* 1.2em * 0.7 = 0.84em */
+}
+a[href="resultados.php"] {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de la fuente */
+    margin-top: 20px; /* Margen superior para separarlo del formulario */
+}
+
+a[href="resultados.php"]:hover {
+    background-color: #3e8e41; /* Color de fondo al pasar el ratón */
+}

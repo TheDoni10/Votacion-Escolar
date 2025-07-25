@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votación Contraloria 2025</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Votación Contraloria 2025</h1>
+    <form action="votar.php" method="POST">
+        <div class="candidatos">
+            <div class="candidato">
+                <img src="img/4.png" alt="Candidato 1">
+                <label><input type="radio" name="candidato" value="1">Luis Felipe Rua palacio  </label>
+            </div>
+            <div class="candidato">
+                <img src="img/1.png" alt="Candidato 2">
+                <label><input type="radio" name="candidato" value="2">Angeline Carmona </label>
+            </div>
+            <div class="candidato">
+                <img src="img/5.png" alt="Candidato 3">
+                <label><input type="radio" name="candidato" value="3"> Bairon Rojas chaverra </label>
+            </div>
+            <div class="candidato">
+                <img src="img/2.png" alt="Candidato 4">
+                <label><input type="radio" name="candidato" value="4"> María Alejandra Osorio Higuita.</label>
+            </div>
+            <div class="candidato">
+                <img src="img/6.png" alt="Candidato 5">
+                <label><input type="radio" name="candidato" value="5"> Sury Marleny Montoya </label>
+            </div>
+            <div class="candidato">
+                <img src="img/3.png" alt="Candidato 6">
+                <label><input type="radio" name="candidato" value="6">Lizeth Orozco arboleda </label>
+            </div>
+            <div class="candidato">
+                <img src="img/7.jpeg" alt="Candidato 7">
+                <label><input type="radio" name="candidato" value="7">Hosmani Pineda </label>
+            </div>
+        </div>
+        <div class="voto-blanco">
+            <label><input type="radio" name="candidato" value="0"> Voto en blanco</label>
+        </div>
+        <button type="submit">Votar</button>
+    </form>
+    <a href="resultados.php">Ver Resultados</a>
+</body>
+</html>

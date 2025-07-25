@@ -1,0 +1,106 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.candidatos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.candidato {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    width: 100%;
+    max-width: 400px;
+    transition: 0.3s ease;
+}
+
+.candidato:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.candidato img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.voto-blanco {
+    margin: 15px 0;
+    font-size: 1.2em;
+}
+
+.btn {
+    background: #ff6600;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: 0.3s ease;
+    display: block;
+    margin: 10px auto;
+}
+
+.btn:hover {
+    background: #ff4500;
+    transform: scale(1.05);
+}
+
+.btn-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #009688;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.btn-link:hover {
+    background: #00796B;
+    transform: scale(1.05);
+}
